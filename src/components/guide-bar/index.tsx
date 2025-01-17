@@ -42,7 +42,6 @@ const GuideBar = () => {
                 }
             });
         }
-        console.log('effect')
         window.addEventListener("scroll", handleScroll)
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
@@ -79,6 +78,7 @@ const Container = styled.nav`
     height: 70px;
     border-radius: 40px;
     background-color: rgb(1, 46, 64, 0.9);
+    z-index: 99999;
 `
 
 const NavSection = styled.button<{ isActive: boolean }>`
