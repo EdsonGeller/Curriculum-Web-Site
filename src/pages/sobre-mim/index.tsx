@@ -48,7 +48,7 @@ const Container = styled.div`
   flex-direction: row;
   position: relative;
   img{
-    margin-top: 100px;
+    margin-top: 120px;
   }
   
 `;

@@ -1,8 +1,10 @@
+import RecommendationsList from "../../components/request";
+
 const Recomendacoes = () => {
     return (
         <div>
             <section>
-                Recomendacoes
+                <RecommendationsList/>
             </section>
         </div>
     );

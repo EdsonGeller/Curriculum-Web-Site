@@ -12,8 +12,17 @@ const Introducao = () => {
                 Full Stack Developer
             </S.SubTitle>
             <Footer>
-            <S.Images src={gitHub} width="40px" height="40px"/>
-            <S.Images src={linkEdin} width="40px" height="40px"/>
+                <Nav
+                    href="https://github.com/EdsonGeller/Curriculum-Web-Site"
+                    target="_blank"
+                >
+                    <S.Images src={gitHub} width="40px" height="40px" />
+                </Nav>
+                <Nav href="https://www.linkedin.com/in/edsongeller1505/"
+                    target="_blank"
+                >
+                    <S.Images src={linkEdin} width="40px" height="40px" />
+                </Nav>
             </Footer>
         </Data>
     );
@@ -21,7 +30,7 @@ const Introducao = () => {
 
 export default Introducao;
 
-const Data = styled.div `
+const Data = styled.div`
 
 display: flex;
 flex-direction: column;
@@ -34,4 +43,10 @@ margin-top: 240px;
 const Footer = styled.footer`
     display: flex;
     flex-direction: row;
+`
+
+const Nav = styled.a`
+    text-decoration: none;
+    cursor: pointer;
+
 `

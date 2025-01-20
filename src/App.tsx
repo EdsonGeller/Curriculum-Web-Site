@@ -5,7 +5,7 @@ import Habilidades from './pages/habilidades'
 import SobreMim from './pages/sobre-mim'
 import Inicio from './pages/Inicio/Index'
 import Carreira from './pages/carreira'
-import Recomendacoes from './pages/recomendacoes'
+// import Recomendacoes from './pages/recomendacoes'
 import Contato from './pages/contato'
 import FastContact from './components/fast-contact'
 
@@ -20,7 +20,7 @@ function App() {
         <Section id='section2'><SobreMim /></Section>
         <Section id='section3'><Habilidades /></Section>
         <Section id='section4'><Carreira /></Section>
-        <Section id='section5'><Recomendacoes /></Section>
+        {/* <Section id='section5'><Recomendacoes /></Section> */}
         <Section id='section6'><Contato /></Section>
       </Container>
 
@@ -34,7 +34,8 @@ const Container = styled.div`
 `
 
 const Section = styled.div`
-  height: 100vh;
+  min-height: 100vh;
+  
 `
 
 export default App

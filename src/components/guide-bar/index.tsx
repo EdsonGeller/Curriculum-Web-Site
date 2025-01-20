@@ -11,7 +11,7 @@ const sections: Section[] = [
     { id: "section2", label: "Sobre mim" },
     { id: "section3", label: "Habilidades" },
     { id: "section4", label: "Carreira" },
-    { id: "section5", label: "Recomendações" },
+    // { id: "section5", label: "Recomendações" },
     { id: "section6", label: "Contato" },
 ];
 
@@ -78,6 +78,7 @@ const Container = styled.nav`
     height: 70px;
     border-radius: 40px;
     background-color: rgb(1, 46, 64, 0.9);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
     z-index: 99999;
 `
 

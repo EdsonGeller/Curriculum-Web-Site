@@ -110,22 +110,34 @@ const Menu = styled.div<{ isOpen: boolean }>`
   }
 `;
 
+
 const Span = styled.div<{ border: boolean }>`
   display: flex;
   border: ${(props) =>
     props.border ? "3px solid rgb(2, 115, 94, 0.7)" : "none"};
   padding: 8px;
   border-radius: 10px;
+
+  cursor: pointer;
+
 `;
 
 const Nav = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   color: #038c65;
   font-size: 16px;
-
   align-items: center;
+
+  transition: 1s;
   span {
     margin-left: 5px;
+  }
+
+  &:hover{
+    color: #fefefe;
   }
 `;
 
