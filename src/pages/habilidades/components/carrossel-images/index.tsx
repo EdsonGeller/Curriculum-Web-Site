@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import * as S from "../../../../styles/titles";
 import { useEffect, useState } from "react";
 
 const generalTechs = import.meta.glob(
@@ -45,22 +46,40 @@ const Carrossel = ({usage}:{usage: 'daily' | 'study'} ) => {
     };
 
     loadImages();
-  }, []);
+  }, [imagesUsage.images]);
 
   return (
-    <Container>
+    <CarrosselContainer>
       {imageUrls.map((url, index) => (
-        <div key={index}>
-          <img src={url} alt={`Tech ${index + 1}`} width="60px" height="60px" />
-        </div>
+        <ImageWrapper key={index}>
+          <S.Images src={url} alt={`Tech ${index + 1}`} width="60px" height="60px" />
+        </ImageWrapper>
       ))}
-    </Container>
+    </CarrosselContainer>
   );
 };
 
 export default Carrossel;
 
-const Container = styled.div`
+const CarrosselContainer = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 16px; 
+  padding: 16px; 
+
+  @media (max-width: 768px) {
+    gap: 12px; 
+    padding: 12px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 8px; 
+    padding: 8px;
+  }
+`;
+
+const ImageWrapper = styled.div`
+  flex: 0 0 auto; 
 `;

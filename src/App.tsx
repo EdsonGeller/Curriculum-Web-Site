@@ -16,26 +16,33 @@ function App() {
       <GuideBar />
       <FastContact />
       <Container>
-        <Section id='section1'><Inicio /></Section>
-        <Section id='section2'><SobreMim /></Section>
-        <Section id='section3'><Habilidades /></Section>
-        <Section id='section4'><Carreira /></Section>
-        {/* <Section id='section5'><Recomendacoes /></Section> */}
-        <Section id='section6'><Contato /></Section>
+        <Section id="section1">
+          <Inicio />
+        </Section>
+        <Section id="section2">
+          <SobreMim />
+        </Section>
+        <Section id="section3">
+          <Habilidades />
+        </Section>
+        <Section id="section4">
+          <Carreira />
+        </Section>
+        <Section id="section6">
+          <Contato />
+        </Section>
       </Container>
-
     </>
-  )
+  );
 }
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-`
+`;
 
 const Section = styled.div`
-  min-height: 100vh;
-  
-`
+  min-height: 100dvh;
+`;
 
 export default App

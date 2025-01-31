@@ -66,35 +66,64 @@ const GuideBar = () => {
 export default GuideBar;
 
 const Container = styled.nav`
+  position: fixed;
+  top: 5dvh;
+  left: 50dvw;
+  transform: translate(-50%);
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 90dvw;
+  max-width: 90dvw;
+  height: 70px;
+  border-radius: 40px;
+  background-color: rgba(1, 46, 64, 0.9);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+  z-index: 99999;
+
+  @media (max-width: 768px) {
+    top: 2.5%;
+    width: 90dvw;
+    height: 50px;
+    gap: 10px;
+  }
+
+  @media (max-width: 480px) {
     position: fixed;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%);
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: center;
-    width: 90%;
-    height: 70px;
-    border-radius: 40px;
-    background-color: rgb(1, 46, 64, 0.9);
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
-    z-index: 99999;
-`
+    top: 2dvh;
+    gap: 5px;
+    left: 50dvw;
+    height: auto;
+    width: 90dvw;
+    padding: 10px;
+    }
+`;
 
 const NavSection = styled.button<{ isActive: boolean }>`
   background: none;
   border: none;
-  color: ${({ isActive }) => (isActive ? "#02735E" : "rgb(255, 255, 255, 0.7)")};
-  font-size: 28px;
+  color: ${({ isActive }) => (isActive ? "#02735E" : "rgba(255, 255, 255, 0.7)")};
+  font-size: 16px;
   white-space: nowrap;
   cursor: pointer;
-  
-  text-align: left;
+  text-align: center;
   padding: 5px 10px;
   transition: color 0.3s;
 
   &:hover {
     color: #02735E;
   }
-`
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+    padding: 5px;
+    white-space: normal;
+  }
+`;

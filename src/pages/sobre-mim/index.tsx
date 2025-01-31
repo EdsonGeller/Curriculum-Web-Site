@@ -42,13 +42,43 @@ const Section = styled.section`
   width: 638px;
   text-align: left;
   line-height: 1;
+
+  @media (max-width: 768px) {
+    width: 90dvw;
+    text-align: left;
+    margin-top: 80px;
+  }
+
+  @media (max-width: 480px) {
+    width: 80dvw; 
+    margin-left: 1px; 
+    margin-top: 60px; 
+    text-align: left; 
+  }
 `;
+
 const Container = styled.div`
   display: flex;
   flex-direction: row;
   position: relative;
-  img{
+
+  img {
     margin-top: 120px;
   }
-  
+
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 80dvw;
+    img {
+      display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    img {
+      display: none;
+    }
+  }
 `;

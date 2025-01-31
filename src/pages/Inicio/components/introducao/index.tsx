@@ -38,6 +38,17 @@ align-items: flex-start;
 line-height: 0;
 margin-top: 240px;
 
+    @media (max-width: 768px) {
+    margin-top: 100px;
+    align-items: center;
+  }
+  
+    @media (max-width: 480px) {
+    margin-top: 50px;
+    align-items: center;
+
+  }
+
 `
 
 const Footer = styled.footer`

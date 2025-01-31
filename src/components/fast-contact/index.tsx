@@ -82,6 +82,8 @@ export default FastContact;
 
 const Container = styled.div`
   position: relative;
+  z-index: 99999;
+
 `;
 
 const Menu = styled.div<{ isOpen: boolean }>`
@@ -95,21 +97,36 @@ const Menu = styled.div<{ isOpen: boolean }>`
   border-radius: 8px;
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
   cursor: pointer;
-
   opacity: ${(props) => (props.isOpen ? 1 : 0)};
   transform: translateY(${(props) => (props.isOpen ? "0" : "20px")});
   transition: all 0.3s ease;
   pointer-events: ${(props) => (props.isOpen ? "all" : "none")};
+  
 
   #closeModal {
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 10px;
   }
-`;
 
+  @media (max-width: 768px) {
+    bottom: 20px;
+    right: 10px;
+    padding: 10px;
+    gap: 8px;
+    
+
+  }
+
+  @media (max-width: 480px) {
+    
+    right: 5px;
+    padding: 8px;
+    gap: 5px;
+
+  }
+`;
 
 const Span = styled.div<{ border: boolean }>`
   display: flex;
@@ -117,9 +134,15 @@ const Span = styled.div<{ border: boolean }>`
     props.border ? "3px solid rgb(2, 115, 94, 0.7)" : "none"};
   padding: 8px;
   border-radius: 10px;
-
   cursor: pointer;
 
+  @media (max-width: 768px) {
+    padding: 6px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 4px;
+  }
 `;
 
 const Nav = styled.a`
@@ -130,14 +153,22 @@ const Nav = styled.a`
   color: #038c65;
   font-size: 16px;
   align-items: center;
-
   transition: 1s;
+
   span {
     margin-left: 5px;
   }
 
-  &:hover{
+  &:hover {
     color: #fefefe;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
   }
 `;
 
@@ -145,13 +176,27 @@ const CloseButton = styled(S.Images)`
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: transparent;
+  background: #011526;
   border: none;
   border-radius: 50%;
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+
   &:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (max-width: 768px) {
+    bottom: 10px;
+    right: 10px;
+    padding: 8px;
+    
+  }
+
+  @media (max-width: 480px) {
+    bottom: 5px;
+    right: 5px;
+    padding: 6px;
   }
 `;

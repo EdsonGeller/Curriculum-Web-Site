@@ -83,6 +83,13 @@ const Card = styled.div<{ isFirst?: boolean }>`
   padding: 10px;
   margin: 15px;
   background-color: ${({ isFirst }) => (isFirst ? 'rgba(2, 115, 94, 0.2)' : 'transparent')};
+
+    @media (max-width: 768px) {
+    min-width: 50dvw;
+    width: 80dvw; 
+    max-width: 100dvh;
+    margin: 10px 0; 
+  }
 `;
 
 const Title = styled.h2`
