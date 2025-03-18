@@ -5,8 +5,8 @@ const experience = [
         title: 'Desenvolvedor Full-Stack na CompassUol',
         content: 'Desenvolvimento de features para soluções empresariais, bem como a manutenção do código, utilizando ReactJS, TypeScript, JavaScript e Java Spring Boot.',
         startDate: 'Setembro 2024',
-        endDate: 'Atualmente',
-        timeSpend: '5 meses'
+        endDate: 'Março 2024',
+        timeSpend: '6 meses'
     },
     {
         title: 'Estagiário na 3M-Analitica',
